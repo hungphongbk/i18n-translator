@@ -34,7 +34,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "PORT=3001 next dev",
+    "dev": "concurrently 'PORT=3001 next dev' 'quirrel'",
     "build": "next build",
     "start": "next start"
   },
@@ -58,6 +58,7 @@
   },
   "devDependencies": {
     "@gitbeaker/node": "^35.7.0",
+    "concurrently": "^7.4.0",
     "graphql-tag": "^2.12.6",
     "prettier": "^2.7.1",
     "prisma": "^4.3.1"
